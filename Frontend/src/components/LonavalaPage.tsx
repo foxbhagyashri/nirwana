@@ -101,9 +101,9 @@ export function LonavalaPage() {
 
                 <div id="accommodations">
                     <LocationAccommodation
-                        selectedLocation={location}
+                       selectedLocation={location}
                         selectedType={selectedType}
-                        onBook={handleBookAccommodation}
+                        onBookAccommodation={handleBookAccommodation}
                     />
                 </div>
             </section>

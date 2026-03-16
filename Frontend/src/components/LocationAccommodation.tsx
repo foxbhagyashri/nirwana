@@ -22,14 +22,11 @@ const truncateText = (text: string, maxLength: number, isMobile: boolean) => {
     if (!isMobile || text.length <= maxLength) return text;
     return text.substring(0, maxLength) + "...";
 };
-
-
 interface AccommodationsProps {
     selectedLocation: string;
     selectedType: string;
-    onBookAccommodation: (accommodation: Accommodation) => void;
+    onBookAccommodation: (accommodationId: string) => void;
 }
-
 // Image Slider Component - OPTIMIZED
 const ImageSlider = ({
     images,
@@ -597,7 +594,7 @@ export function LocationAccommodation({
 
     const handleBookAccommodation = useCallback(
         (accommodation: Accommodation) => {
-            onBookAccommodation(accommodation);
+            onBookAccommodation(accommodation.id);
         },
         [onBookAccommodation]
     );

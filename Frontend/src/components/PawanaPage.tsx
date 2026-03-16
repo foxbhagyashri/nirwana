@@ -9,8 +9,8 @@ import { AccommodationTypes } from "./AccommodationTypes";
 import { LocationAccommodation } from "./LocationAccommodation";
 
 export function PawanaPage() {
-  const params = useParams();
-  const location = params.location;
+const params = useParams();
+const location = params.location as string;
 
   const router = useRouter();
   usePageTracking();
@@ -96,11 +96,11 @@ export function PawanaPage() {
         </div>
 
         <div id="accommodations">
-          <LocationAccommodation
-            selectedLocation={location}
-            selectedType={selectedType}
-            onBook={handleBookAccommodation}
-          />
+<LocationAccommodation
+  selectedLocation={location}
+  selectedType={selectedType}
+  onBookAccommodation={handleBookAccommodation}
+/>
         </div>
       </section>
 

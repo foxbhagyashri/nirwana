@@ -103,7 +103,7 @@ export function MatheranPage() {
                     <LocationAccommodation
                         selectedLocation={location}
                         selectedType={selectedType}
-                        onBook={handleBookAccommodation}
+                        onBookAccommodation={handleBookAccommodation}
                     />
                 </div>
             </section>

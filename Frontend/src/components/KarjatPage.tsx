@@ -101,9 +101,9 @@ export function KarjatPage() {
 
                 <div id="accommodations">
                     <LocationAccommodation
-                        selectedLocation={location}
+                    selectedLocation={location}
                         selectedType={selectedType}
-                        onBook={handleBookAccommodation}
+                        onBookAccommodation={handleBookAccommodation}
                     />
                 </div>
             </section>

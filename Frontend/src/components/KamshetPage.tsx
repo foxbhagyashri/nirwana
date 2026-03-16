@@ -10,9 +10,9 @@ import { LocationAccommodation } from "./LocationAccommodation";
 
 export function KamshetPage() {
     const params = useParams();
-  const location = Array.isArray(params.location)
-  ? params.location[0]
-  : params.location || "kamshet";
+    const location = Array.isArray(params.location)
+        ? params.location[0]
+        : params.location || "kamshet";
 
     const router = useRouter();
     usePageTracking();
@@ -103,7 +103,7 @@ export function KamshetPage() {
                     <LocationAccommodation
                         selectedLocation={location}
                         selectedType={selectedType}
-                        onBook={handleBookAccommodation}
+                        onBookAccommodation={handleBookAccommodation}
                     />
                 </div>
             </section>
